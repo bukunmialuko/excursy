@@ -62,6 +62,7 @@ class _RightSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
+          SizedBox(height: (Responsive.isMobile(context)) ? 16 : 0),
           Text(
             "Our Values",
             textAlign: (Responsive.isMobile(context))
@@ -89,19 +90,26 @@ class _RightSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 35),
-          Center(
-            child: EXCButton(
-              width: 161,
-              height: 54,
-              child: const Text(
-                "Read More",
-                style: TextStyle(
-                    color: AppColors.white,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 16),
-              ),
-              onPressed: () => {},
-            ),
+          Row(
+            mainAxisAlignment: (Responsive.isMobile(context))
+                ? MainAxisAlignment.center
+                : MainAxisAlignment.start,
+            children: [
+              Center(
+                child: EXCButton(
+                  width: 161,
+                  height: 54,
+                  child: const Text(
+                    "Read More",
+                    style: TextStyle(
+                        color: AppColors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16),
+                  ),
+                  onPressed: () => {},
+                ),
+              )
+            ],
           )
         ],
       ),

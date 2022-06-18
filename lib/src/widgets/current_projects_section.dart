@@ -12,7 +12,7 @@ class CurrentProjectsSection extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
               children: const [
-                const _Text(),
+                _Text(),
                 _MobileItem(
                   assetName: 'assets/png/current_project_1.png',
                   title: 'Certified Great \nExpectations Lover ',
@@ -109,7 +109,7 @@ class _OurInterestWebItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: 380,
       // color: AppColors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -164,16 +164,16 @@ class _Buttons extends StatelessWidget {
               height: (Responsive.isMobile(context)) ? 48 : 64,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
-                children: const [
+                children: [
                   Text(
                     "Get Started",
                     style: TextStyle(
                         color: AppColors.white,
                         fontWeight: FontWeight.w700,
-                        fontSize: 16),
+                        fontSize: (Responsive.isMobile(context)) ? 14 : 16),
                   ),
-                  SizedBox(width: 8),
-                  Icon(Icons.chevron_right_rounded)
+                  const SizedBox(width: 8),
+                  const Icon(Icons.chevron_right_rounded)
                 ],
               ),
               onPressed: () => {},

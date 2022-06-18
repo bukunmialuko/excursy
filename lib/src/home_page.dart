@@ -51,6 +51,11 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 158),
             ],
             const OurInterestsSection(),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 179),
+            ],
             const OurValuesSection(),
             if (Responsive.isMobile(context)) ...[
               const SizedBox(height: 48)

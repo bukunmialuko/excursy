@@ -47,7 +47,7 @@ class _Text extends StatelessWidget {
             style: TextStyle(
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
-                fontSize: (Responsive.isMobile(context)) ? 12 : 52),
+                fontSize: (Responsive.isMobile(context)) ? 12 : 20),
           ),
         ),
       ],
@@ -61,7 +61,7 @@ class _WebInterests extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 121),
+      padding: const EdgeInsets.symmetric(horizontal: 121),
       child: Wrap(
         spacing: 30,
         crossAxisAlignment: WrapCrossAlignment.center,
