@@ -1,6 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AboutUsSection extends StatefulWidget {
@@ -18,15 +17,15 @@ class _AboutUsSectionState extends State<AboutUsSection> {
       children: [
         Container(
           color: Colors.orange,
-          width: 105.w,
+          width: 105,
           // height: 1,
         ),
         const _LeftSection(),
-        SizedBox(width: 30.w),
+        const SizedBox(width: 30),
         const _RightSection(),
         Container(
           color: Colors.orange,
-          width: 120.w,
+          width: 120,
           // height: 1,
         ),
       ],
@@ -40,11 +39,11 @@ class _LeftSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 546.w,
+      width: 546,
       child: SvgPicture.asset(
         "assets/svg/about_us.svg",
-        width: 546.w,
-        height: 331.h,
+        width: 546,
+        height: 331,
       ),
     );
   }
@@ -56,7 +55,7 @@ class _RightSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 639.w,
+      width: 639,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -67,7 +66,7 @@ class _RightSection extends StatelessWidget {
                 fontWeight: FontWeight.w800,
                 fontSize: 52),
           ),
-          SizedBox(height: 35.h),
+          const SizedBox(height: 35),
           const Text(
             "We generated names based on a multitude of factors and picked the one that resonated with us the most. Our founder first engaged with the blockchain in 2013",
             style: TextStyle(
@@ -75,9 +74,9 @@ class _RightSection extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 fontSize: 20),
           ),
-          SizedBox(height: 35.h),
+          const SizedBox(height: 35),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 18.h),
+            padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 18),
             color: AppColors.white,
             child: Row(
               children: const [
@@ -147,9 +146,9 @@ class _AboutUsSpacer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80.h,
-      width: 3.w,
-      margin: EdgeInsets.symmetric(horizontal: 30.w),
+      height: 80,
+      width: 3,
+      margin: EdgeInsets.symmetric(horizontal: 30),
       color: AppColors.orange,
     );
   }

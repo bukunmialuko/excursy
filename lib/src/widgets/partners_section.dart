@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PartnersSection extends StatefulWidget {
@@ -12,54 +11,57 @@ class PartnersSection extends StatefulWidget {
 class _PartnersSectionState extends State<PartnersSection> {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        SizedBox(
-          width: 1035.w,
-          height: 57.h,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                width: 169.w,
-                child: SvgPicture.asset(
-                  "assets/svg/microsoft.svg",
-                  width: 169.w,
-                  height: 43.h,
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            width: 1035,
+            height: 57,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 169,
+                  child: SvgPicture.asset(
+                    "assets/svg/microsoft.svg",
+                    width: 169,
+                    height: 43,
+                  ),
                 ),
-              ),
-              const _PartnerSpacer(),
-              SizedBox(
-                width: 169.w,
-                child: SvgPicture.asset(
-                  "assets/svg/microsoft.svg",
-                  width: 169.w,
-                  height: 43.h,
+                const _PartnerSpacer(),
+                SizedBox(
+                  width: 169,
+                  child: SvgPicture.asset(
+                    "assets/svg/microsoft.svg",
+                    width: 169,
+                    height: 43,
+                  ),
                 ),
-              ),
-              const _PartnerSpacer(),
-              SizedBox(
-                width: 169.w,
-                child: SvgPicture.asset(
-                  "assets/svg/microsoft.svg",
-                  width: 169.w,
-                  height: 43.h,
+                const _PartnerSpacer(),
+                SizedBox(
+                  width: 169,
+                  child: SvgPicture.asset(
+                    "assets/svg/microsoft.svg",
+                    width: 169,
+                    height: 43,
+                  ),
                 ),
-              ),
-              const _PartnerSpacer(),
-              SizedBox(
-                width: 175.w,
-                child: SvgPicture.asset(
-                  "assets/svg/microsoft.svg",
-                  width: 175.w,
-                  height: 43.h,
+                const _PartnerSpacer(),
+                SizedBox(
+                  width: 175,
+                  child: SvgPicture.asset(
+                    "assets/svg/microsoft.svg",
+                    width: 175,
+                    height: 43,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
@@ -72,9 +74,9 @@ class _PartnerSpacer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 57.h,
-      width: 2.w,
-      margin: EdgeInsets.symmetric(horizontal: 48.w),
+      height: 57,
+      width: 2,
+      margin: const EdgeInsets.symmetric(horizontal: 48),
       color: const Color(0xffC0C5D2),
     );
   }

@@ -1,6 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CurrentProjectsSection extends StatelessWidget {
   const CurrentProjectsSection({Key? key}) : super(key: key);
@@ -17,11 +16,11 @@ class CurrentProjectsSection extends StatelessWidget {
               fontWeight: FontWeight.w800,
               fontSize: 52),
         ),
-        SizedBox(height: 84.h),
+        const SizedBox(height: 84),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 120.w),
+          padding: EdgeInsets.symmetric(horizontal: 120),
           child: Wrap(
-            spacing: 30.w,
+            spacing: 30,
             crossAxisAlignment: WrapCrossAlignment.center,
             children: const [
               _OurInterestItem(
@@ -65,14 +64,14 @@ class _OurInterestItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 378.w,
+      width: 378,
       // color: AppColors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 378.w,
-            height: 378.h,
+            width: 378,
+            height: 378,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(assetName),
@@ -80,7 +79,7 @@ class _OurInterestItem extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 24.h),
+          const SizedBox(height: 24),
           Text(
             title,
             style: const TextStyle(
@@ -88,7 +87,7 @@ class _OurInterestItem extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 fontSize: 28),
           ),
-          SizedBox(height: 24.h),
+          const SizedBox(height: 24),
           RichText(
             text: TextSpan(
               text: subTitle,

@@ -1,7 +1,6 @@
 import 'package:excursy/src/res/colors.dart';
 import 'package:excursy/src/shared/exc_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class GetStartedSection extends StatefulWidget {
@@ -19,11 +18,11 @@ class _GetStartedSectionState extends State<GetStartedSection> {
       children: [
         Container(
           color: Colors.orange,
-          width: 120.w,
+          width: 120,
           // height: 1,
         ),
         const _LeftSection(),
-        SizedBox(width: 91.w),
+        const SizedBox(width: 91),
         const _RightSection(),
       ],
     );
@@ -41,7 +40,7 @@ class _LeftSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: 502.w,
+            width: 502,
             child: RichText(
               text: const TextSpan(
                 text: 'Let’s take a \ntour to ',
@@ -71,10 +70,10 @@ class _LeftSection extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 36.h),
-          SizedBox(
-            width: 448.w,
-            child: const Text(
+          const SizedBox(height: 36),
+          const SizedBox(
+            width: 448,
+            child: Text(
               "We are highly focused by blockchain technology that will lead positively to the future web.",
               style: TextStyle(
                   color: AppColors.orange,
@@ -82,34 +81,34 @@ class _LeftSection extends StatelessWidget {
                   fontSize: 18),
             ),
           ),
-          SizedBox(height: 74.h),
+          const SizedBox(height: 74),
           SizedBox(
-            width: 502.w,
+            width: 502,
             child: Wrap(
               children: [
                 EXCButton(
-                  width: 208.w,
-                  height: 64.h,
+                  width: 208,
+                  height: 64,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Text(
+                    children: const [
+                      Text(
                         "Get Started",
                         style: TextStyle(
                             color: AppColors.white,
                             fontWeight: FontWeight.w700,
                             fontSize: 16),
                       ),
-                      SizedBox(width: 8.w),
-                      const Icon(Icons.chevron_right_rounded)
+                      SizedBox(width: 8),
+                      Icon(Icons.chevron_right_rounded)
                     ],
                   ),
                   onPressed: () => {},
                 ),
-                SizedBox(width: 32.w),
+                const SizedBox(width: 32),
                 EXCButton(
-                  width: 208.w,
-                  height: 64.h,
+                  width: 208,
+                  height: 64,
                   color: AppColors.white,
                   borderColor: AppColors.orange,
                   child: const Text(
@@ -136,11 +135,11 @@ class _RightSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 719.w,
+      width: 719,
       child: SvgPicture.asset(
         "assets/svg/people1.svg",
-        width: 719.w,
-        height: 390.h,
+        width: 719,
+        height: 390,
       ),
     );
   }

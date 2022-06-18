@@ -6,7 +6,6 @@ import 'package:excursy/src/widgets/our_interests_section.dart';
 import 'package:excursy/src/widgets/our_values_section.dart';
 import 'package:excursy/src/widgets/partners_section.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/header_section.dart';
 
@@ -24,22 +23,22 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            SizedBox(height: 56.h),
-            const HeaderSection(),
-            SizedBox(height: 127.h),
-            const GetStartedSection(),
-            SizedBox(height: 159.h),
-            const PartnersSection(),
-            SizedBox(height: 139.h),
-            const AboutUsSection(),
-            SizedBox(height: 158.h),
-            const OurInterestsSection(),
-            const OurValuesSection(),
-            SizedBox(height: 179.h),
-            const CurrentProjectsSection(),
-            SizedBox(height: 132.h),
-            const FooterSection(),
+          children: const <Widget>[
+            SizedBox(height: 56),
+            HeaderSection(),
+            SizedBox(height: 127),
+            GetStartedSection(),
+            SizedBox(height: 159),
+            PartnersSection(),
+            SizedBox(height: 139),
+            AboutUsSection(),
+            SizedBox(height: 158),
+            OurInterestsSection(),
+            OurValuesSection(),
+            SizedBox(height: 179),
+            CurrentProjectsSection(),
+            SizedBox(height: 132),
+            FooterSection(),
           ],
         ),
       ),

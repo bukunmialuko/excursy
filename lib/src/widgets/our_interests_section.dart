@@ -1,6 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OurInterestsSection extends StatelessWidget {
@@ -18,10 +17,10 @@ class OurInterestsSection extends StatelessWidget {
               fontWeight: FontWeight.w800,
               fontSize: 52),
         ),
-        SizedBox(height: 35.h),
-        SizedBox(
-          width: 765.w,
-          child: const Text(
+        const SizedBox(height: 35),
+        const SizedBox(
+          width: 765,
+          child: Text(
             "It's the norm these days to lay out a roadmap that gives stakeholders an indication of the direction that the project aspires to go. Inspired by Elon Musk’s 2006 masterplan, these are our skeleton ambitions.",
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -30,11 +29,11 @@ class OurInterestsSection extends StatelessWidget {
                 fontSize: 20),
           ),
         ),
-        SizedBox(height: 65.h),
+        const SizedBox(height: 65),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 121.w),
+          padding: EdgeInsets.symmetric(vertical: 121),
           child: Wrap(
-            spacing: 30.w,
+            spacing: 30,
             crossAxisAlignment: WrapCrossAlignment.center,
             children: const [
               _OurInterestItem(
@@ -78,21 +77,21 @@ class _OurInterestItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 379.w,
-      padding: EdgeInsets.symmetric(
-        horizontal: 44.w,
-        vertical: 40.h,
+      width: 379,
+      padding: const EdgeInsets.symmetric(
+        horizontal: 44,
+        vertical: 40,
       ),
       color: AppColors.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: 40.w,
-            height: 40.w,
+            width: 40,
+            height: 40,
             child: SvgPicture.asset(assetName),
           ),
-          SizedBox(height: 24.h),
+          const SizedBox(height: 24),
           Text(
             title,
             style: const TextStyle(
@@ -100,7 +99,7 @@ class _OurInterestItem extends StatelessWidget {
                 fontWeight: FontWeight.w700,
                 fontSize: 28),
           ),
-          SizedBox(height: 24.h),
+          const SizedBox(height: 24),
           Text(
             subTitle,
             style: const TextStyle(
@@ -108,7 +107,7 @@ class _OurInterestItem extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 fontSize: 18),
           ),
-          SizedBox(height: 32.h),
+          const SizedBox(height: 32),
           const Text(
             'Read More',
             style: TextStyle(

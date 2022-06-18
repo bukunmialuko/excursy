@@ -1,6 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class FooterSection extends StatelessWidget {
@@ -10,12 +9,12 @@ class FooterSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.darkBlack,
-      height: 302.h,
+      height: 302,
       child: Stack(
         fit: StackFit.expand,
         children: [
           Container(
-            height: 302.h,
+            height: 302,
             color: const Color(0xff2B2B2B),
           ),
           Column(
@@ -23,63 +22,63 @@ class FooterSection extends StatelessWidget {
             children: [
               const Spacer(),
               SizedBox(
-                height: 62.h,
-                width: 195.w,
+                height: 62,
+                width: 195,
                 child: SvgPicture.asset(
                   'assets/svg/logo_footer.svg',
-                  height: 62.h,
-                  width: 195.w,
+                  height: 62,
+                  width: 195,
                 ),
               ),
-              SizedBox(
-                height: 40.h,
+              const SizedBox(
+                height: 40,
               ),
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
-                spacing: 28.w,
+                spacing: 28,
                 children: [
                   SizedBox(
-                    height: 36.w,
-                    width: 36.w,
+                    height: 36,
+                    width: 36,
                     child: SvgPicture.asset(
                       'assets/svg/social/facebook.svg',
-                      height: 36.w,
-                      width: 36.w,
+                      height: 36,
+                      width: 36,
                     ),
                   ),
                   SizedBox(
-                    height: 36.w,
-                    width: 36.w,
+                    height: 36,
+                    width: 36,
                     child: SvgPicture.asset(
                       'assets/svg/social/twitch.svg',
-                      height: 36.w,
-                      width: 36.w,
+                      height: 36,
+                      width: 36,
                     ),
                   ),
                   SizedBox(
-                    height: 36.w,
-                    width: 36.w,
+                    height: 36,
+                    width: 36,
                     child: SvgPicture.asset(
                       'assets/svg/social/linkedin.svg',
-                      height: 36.w,
-                      width: 36.w,
+                      height: 36,
+                      width: 36,
                     ),
                   ),
                   SizedBox(
-                    height: 36.w,
-                    width: 36.w,
+                    height: 36,
+                    width: 36,
                     child: SvgPicture.asset(
                       'assets/svg/social/facebook.svg',
-                      height: 36.w,
-                      width: 36.w,
+                      height: 36,
+                      width: 36,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 40.h),
+              const SizedBox(height: 40),
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
-                spacing: 40.w,
+                spacing: 40,
                 children: const [
                   Text(
                     "Home",
@@ -118,7 +117,7 @@ class FooterSection extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 40.h)
+              const SizedBox(height: 40)
             ],
           )
         ],

@@ -2,7 +2,6 @@ import 'package:excursy/src/res/colors.dart';
 import 'package:excursy/src/responsive.dart';
 import 'package:excursy/src/shared/exc_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HeaderSection extends StatelessWidget {
@@ -42,7 +41,7 @@ class HeaderSection extends StatelessWidget {
             children: [
               Container(
                 color: Colors.orange,
-                width: 120.w,
+                width: 120,
                 // height: 1,
               ),
               const Flexible(
@@ -50,7 +49,7 @@ class HeaderSection extends StatelessWidget {
               ),
               Container(
                 color: Colors.orange,
-                width: 120.w,
+                width: 120,
                 // height: 1,
               ),
             ],
@@ -64,16 +63,16 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 76.h,
+      height: 76,
       child: Wrap(
         crossAxisAlignment: WrapCrossAlignment.center,
         children: [
           SvgPicture.asset(
             "assets/svg/logo_large.svg",
-            width: 239.w,
-            height: 76.h,
+            width: 239,
+            height: 76,
           ),
-          SizedBox(width: 110.w),
+          SizedBox(width: 110),
           const Text(
             "Home",
             style: TextStyle(
@@ -81,7 +80,7 @@ class HeaderWidget extends StatelessWidget {
                 fontWeight: FontWeight.w700,
                 fontSize: 18),
           ),
-          SizedBox(width: 48.w),
+          SizedBox(width: 48),
           const Text(
             "About us",
             style: TextStyle(
@@ -89,7 +88,7 @@ class HeaderWidget extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 fontSize: 18),
           ),
-          SizedBox(width: 48.w),
+          SizedBox(width: 48),
           const Text(
             "Our interests",
             style: TextStyle(
@@ -97,7 +96,7 @@ class HeaderWidget extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 fontSize: 18),
           ),
-          SizedBox(width: 48.w),
+          SizedBox(width: 48),
           const Text(
             "Values",
             style: TextStyle(
@@ -105,7 +104,7 @@ class HeaderWidget extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 fontSize: 18),
           ),
-          SizedBox(width: 48.w),
+          SizedBox(width: 48),
           const Text(
             "Current Projects",
             style: TextStyle(
@@ -113,10 +112,10 @@ class HeaderWidget extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 fontSize: 18),
           ),
-          SizedBox(width: 79.w),
+          SizedBox(width: 79),
           EXCButton(
-            width: 146.w,
-            height: 55.h,
+            width: 146,
+            height: 55,
             child: const Text(
               "Sign Up",
               style: TextStyle(
