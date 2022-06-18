@@ -17,15 +17,15 @@ class _PartnersSectionState extends State<PartnersSection> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SizedBox(
-            width: (Responsive.isMobile(context)) ? 35 : 203,
-          ),
+          // SizedBox(
+          //   width: (Responsive.isMobile(context)) ? 35 : 0,
+          // ),
           SizedBox(
             width: (Responsive.isMobile(context)) ? 50 : 169,
             child: SvgPicture.asset(
               "assets/svg/partners/slack.svg",
               width: (Responsive.isMobile(context)) ? 50 : 169,
-              height: 13,
+              height: (Responsive.isMobile(context)) ? 13 : 157,
               fit: BoxFit.fitWidth,
             ),
           ),
@@ -35,7 +35,7 @@ class _PartnersSectionState extends State<PartnersSection> {
             child: SvgPicture.asset(
               "assets/svg/microsoft.svg",
               width: (Responsive.isMobile(context)) ? 50 : 169,
-              height: 13,
+              height: (Responsive.isMobile(context)) ? 13 : 157,
             ),
           ),
           const _PartnerSpacer(),
@@ -44,7 +44,7 @@ class _PartnersSectionState extends State<PartnersSection> {
             child: SvgPicture.asset(
               "assets/svg/microsoft.svg",
               width: (Responsive.isMobile(context)) ? 50 : 169,
-              height: 13,
+              height: (Responsive.isMobile(context)) ? 13 : 157,
             ),
           ),
           const _PartnerSpacer(),
@@ -53,16 +53,7 @@ class _PartnersSectionState extends State<PartnersSection> {
             child: SvgPicture.asset(
               "assets/svg/microsoft.svg",
               width: (Responsive.isMobile(context)) ? 50 : 169,
-              height: 13,
-            ),
-          ),
-          const _PartnerSpacer(),
-          SizedBox(
-            width: (Responsive.isMobile(context)) ? 50 : 169,
-            child: SvgPicture.asset(
-              "assets/svg/microsoft.svg",
-              width: (Responsive.isMobile(context)) ? 50 : 169,
-              height: 43,
+              height: (Responsive.isMobile(context)) ? 13 : 157,
             ),
           ),
         ],
