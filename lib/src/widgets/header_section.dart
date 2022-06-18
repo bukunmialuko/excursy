@@ -9,7 +9,7 @@ class HeaderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return (Responsive.isMobile(context)
+    return Responsive.isMobile(context)
         ? Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -62,7 +62,7 @@ class HeaderSection extends StatelessWidget {
                 // height: 1,
               ),
             ],
-          ));
+          );
   }
 }
 
