@@ -80,41 +80,41 @@ class FooterSection extends StatelessWidget {
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
                 spacing: 40.w,
-                children: [
+                children: const [
                   Text(
                     "Home",
                     style: TextStyle(
                         color: AppColors.white,
                         fontWeight: FontWeight.w500,
-                        fontSize: 18.sp),
+                        fontSize: 18),
                   ),
                   Text(
                     "About us",
                     style: TextStyle(
                         color: AppColors.white,
                         fontWeight: FontWeight.w500,
-                        fontSize: 18.sp),
+                        fontSize: 18),
                   ),
                   Text(
                     "Our interests",
                     style: TextStyle(
                         color: AppColors.white,
                         fontWeight: FontWeight.w500,
-                        fontSize: 18.sp),
+                        fontSize: 18),
                   ),
                   Text(
                     "Values",
                     style: TextStyle(
                         color: AppColors.white,
                         fontWeight: FontWeight.w500,
-                        fontSize: 18.sp),
+                        fontSize: 18),
                   ),
                   Text(
                     "Current Projects",
                     style: TextStyle(
                         color: AppColors.white,
                         fontWeight: FontWeight.w500,
-                        fontSize: 18.sp),
+                        fontSize: 18),
                   ),
                 ],
               ),

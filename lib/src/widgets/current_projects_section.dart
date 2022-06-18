@@ -10,12 +10,12 @@ class CurrentProjectsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
+        const Text(
           "Current Projects",
           style: TextStyle(
               color: AppColors.darkBlack,
               fontWeight: FontWeight.w800,
-              fontSize: 52.sp),
+              fontSize: 52),
         ),
         SizedBox(height: 84.h),
         Padding(
@@ -83,27 +83,27 @@ class _OurInterestItem extends StatelessWidget {
           SizedBox(height: 24.h),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w600,
-                fontSize: 28.sp),
+                fontSize: 28),
           ),
           SizedBox(height: 24.h),
           RichText(
             text: TextSpan(
               text: subTitle,
-              style: TextStyle(
+              style: const TextStyle(
                 color: AppColors.darkGrey,
-                fontSize: 20.sp,
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
               ),
-              children: <TextSpan>[
+              children: const <TextSpan>[
                 TextSpan(
                   text: ' Read more',
                   style: TextStyle(
                     color: AppColors.orange,
                     fontWeight: FontWeight.w600,
-                    fontSize: 18.sp,
+                    fontSize: 18,
                   ),
                 ),
               ],

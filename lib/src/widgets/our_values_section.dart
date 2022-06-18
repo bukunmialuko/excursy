@@ -62,31 +62,31 @@ class _RightSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "Our Values",
             style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w800,
-                fontSize: 52.sp),
+                fontSize: 52),
           ),
           SizedBox(height: 35.h),
-          Text(
+          const Text(
             'anftw is a hallmark. The team members may change, but the quality of our project execution will not.An outstanding team can build a product in any industry. Don’t be intimidated by incumbents.',
             style: TextStyle(
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
-                fontSize: 20.sp),
+                fontSize: 20),
           ),
           SizedBox(height: 35.h),
           EXCButton(
             width: 161.w,
             height: 54.h,
-            child: Text(
+            child: const Text(
               "Read More",
               style: TextStyle(
                   color: AppColors.white,
                   fontWeight: FontWeight.w700,
-                  fontSize: 16.sp),
+                  fontSize: 16),
             ),
             onPressed: () => {},
           )

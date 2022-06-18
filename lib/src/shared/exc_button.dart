@@ -56,7 +56,7 @@ class EXCButton extends StatelessWidget {
   buttonTextStyle() {
     return TextStyle(
       fontFamily: 'Gilroy',
-      fontSize: fontSize ?? 16.sp,
+      fontSize: fontSize ?? 16,
       color: textColor ?? borderColor ?? Colors.white,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w600,

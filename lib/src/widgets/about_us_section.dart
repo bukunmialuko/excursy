@@ -60,20 +60,20 @@ class _RightSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             "About Us",
             style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w800,
-                fontSize: 52.sp),
+                fontSize: 52),
           ),
           SizedBox(height: 35.h),
-          Text(
+          const Text(
             "We generated names based on a multitude of factors and picked the one that resonated with us the most. Our founder first engaged with the blockchain in 2013",
             style: TextStyle(
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
-                fontSize: 20.sp),
+                fontSize: 20),
           ),
           SizedBox(height: 35.h),
           Container(
@@ -121,17 +121,17 @@ class _AboutItem extends StatelessWidget {
         children: [
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w600,
-                fontSize: 23.sp),
+                fontSize: 23),
           ),
           Text(
             count,
-            style: TextStyle(
+            style: const TextStyle(
                 color: AppColors.orange,
                 fontWeight: FontWeight.w700,
-                fontSize: 40.sp),
+                fontSize: 40),
           ),
         ],
       ),

@@ -11,23 +11,23 @@ class OurInterestsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
+        const Text(
           "Our Interests",
           style: TextStyle(
               color: AppColors.darkBlack,
               fontWeight: FontWeight.w800,
-              fontSize: 52.sp),
+              fontSize: 52),
         ),
         SizedBox(height: 35.h),
         SizedBox(
           width: 765.w,
-          child: Text(
+          child: const Text(
             "It's the norm these days to lay out a roadmap that gives stakeholders an indication of the direction that the project aspires to go. Inspired by Elon Musk’s 2006 masterplan, these are our skeleton ambitions.",
             textAlign: TextAlign.center,
             style: TextStyle(
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
-                fontSize: 20.sp),
+                fontSize: 20),
           ),
         ),
         SizedBox(height: 65.h),
@@ -95,26 +95,26 @@ class _OurInterestItem extends StatelessWidget {
           SizedBox(height: 24.h),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w700,
-                fontSize: 28.sp),
+                fontSize: 28),
           ),
           SizedBox(height: 24.h),
           Text(
             subTitle,
-            style: TextStyle(
+            style: const TextStyle(
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
-                fontSize: 18.sp),
+                fontSize: 18),
           ),
           SizedBox(height: 32.h),
-          Text(
+          const Text(
             'Read More',
             style: TextStyle(
                 color: AppColors.orange,
                 fontWeight: FontWeight.w600,
-                fontSize: 18.sp),
+                fontSize: 18),
           ),
         ],
       ),

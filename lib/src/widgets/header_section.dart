@@ -46,55 +46,55 @@ class HeaderWidget extends StatelessWidget {
             height: 76.h,
           ),
           SizedBox(width: 110.w),
-          Text(
+          const Text(
             "Home",
             style: TextStyle(
                 color: AppColors.orange,
                 fontWeight: FontWeight.w700,
-                fontSize: 18.sp),
+                fontSize: 18),
           ),
           SizedBox(width: 48.w),
-          Text(
+          const Text(
             "About us",
             style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w400,
-                fontSize: 18.sp),
+                fontSize: 18),
           ),
           SizedBox(width: 48.w),
-          Text(
+          const Text(
             "Our interests",
             style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w400,
-                fontSize: 18.sp),
+                fontSize: 18),
           ),
           SizedBox(width: 48.w),
-          Text(
+          const Text(
             "Values",
             style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w400,
-                fontSize: 18.sp),
+                fontSize: 18),
           ),
           SizedBox(width: 48.w),
-          Text(
+          const Text(
             "Current Projects",
             style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w400,
-                fontSize: 18.sp),
+                fontSize: 18),
           ),
           SizedBox(width: 79.w),
           EXCButton(
             width: 146.w,
             height: 55.h,
-            child: Text(
+            child: const Text(
               "Sign Up",
               style: TextStyle(
                   color: AppColors.white,
                   fontWeight: FontWeight.w700,
-                  fontSize: 16.sp),
+                  fontSize: 16),
             ),
             onPressed: () => {},
           )
