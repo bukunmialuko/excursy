@@ -27,7 +27,6 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             const SizedBox(height: 56),
             const HeaderSection(),
-            const SizedBox(height: 55),
             if (Responsive.isMobile(context)) ...[
               const SizedBox(height: 48)
             ] else ...[
@@ -40,7 +39,11 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(height: 159),
             ],
             const PartnersSection(),
-            const SizedBox(height: 139),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 24)
+            ] else ...[
+              const SizedBox(height: 139),
+            ],
             const AboutUsSection(),
             if (Responsive.isMobile(context)) ...[
               const SizedBox(height: 48)
@@ -49,7 +52,11 @@ class _HomePageState extends State<HomePage> {
             ],
             const OurInterestsSection(),
             const OurValuesSection(),
-            const SizedBox(height: 179),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 179),
+            ],
             const CurrentProjectsSection(),
             const SizedBox(height: 132),
             const FooterSection(),

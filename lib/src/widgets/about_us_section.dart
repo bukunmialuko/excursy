@@ -97,12 +97,12 @@ class _AboutUsText extends StatelessWidget {
             textAlign: (Responsive.isMobile(context))
                 ? TextAlign.center
                 : TextAlign.start,
-            style: const TextStyle(
+            style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w800,
-                fontSize: 52),
+                fontSize: (Responsive.isMobile(context)) ? 24 : 52),
           ),
-          const SizedBox(height: 35),
+          SizedBox(height: (Responsive.isMobile(context)) ? 16 : 35),
           Padding(
             padding: (Responsive.isMobile(context))
                 ? const EdgeInsets.symmetric(horizontal: 18)
@@ -112,13 +112,13 @@ class _AboutUsText extends StatelessWidget {
               textAlign: (Responsive.isMobile(context))
                   ? TextAlign.center
                   : TextAlign.start,
-              style: const TextStyle(
+              style: TextStyle(
                   color: AppColors.darkGrey,
                   fontWeight: FontWeight.w400,
-                  fontSize: 20),
+                  height: 1.6,
+                  fontSize: (Responsive.isMobile(context)) ? 12 : 20),
             ),
           ),
-          const SizedBox(height: 35),
         ],
       ),
     );

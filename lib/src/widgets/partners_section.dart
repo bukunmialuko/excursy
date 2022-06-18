@@ -1,3 +1,4 @@
+import 'package:excursy/src/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -23,29 +24,29 @@ class _PartnersSectionState extends State<PartnersSection> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  width: 169,
+                  width: (Responsive.isMobile(context)) ? 70 : 169,
                   child: SvgPicture.asset(
                     "assets/svg/microsoft.svg",
-                    width: 169,
-                    height: 43,
+                    width: (Responsive.isMobile(context)) ? 70 : 169,
+                    height: (Responsive.isMobile(context)) ? 14 : 43,
                   ),
                 ),
                 const _PartnerSpacer(),
                 SizedBox(
-                  width: 169,
+                  width: (Responsive.isMobile(context)) ? 70 : 169,
                   child: SvgPicture.asset(
                     "assets/svg/microsoft.svg",
-                    width: 169,
-                    height: 43,
+                    width: (Responsive.isMobile(context)) ? 70 : 169,
+                    height: (Responsive.isMobile(context)) ? 14 : 43,
                   ),
                 ),
                 const _PartnerSpacer(),
                 SizedBox(
-                  width: 169,
+                  width: (Responsive.isMobile(context)) ? 70 : 169,
                   child: SvgPicture.asset(
                     "assets/svg/microsoft.svg",
-                    width: 169,
-                    height: 43,
+                    width: (Responsive.isMobile(context)) ? 70 : 169,
+                    height: (Responsive.isMobile(context)) ? 14 : 43,
                   ),
                 ),
                 const _PartnerSpacer(),
@@ -53,8 +54,8 @@ class _PartnersSectionState extends State<PartnersSection> {
                   width: 175,
                   child: SvgPicture.asset(
                     "assets/svg/microsoft.svg",
-                    width: 175,
-                    height: 43,
+                    width: (Responsive.isMobile(context)) ? 70 : 169,
+                    height: (Responsive.isMobile(context)) ? 14 : 43,
                   ),
                 ),
               ],
@@ -74,8 +75,8 @@ class _PartnerSpacer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 57,
-      width: 2,
+      height: (Responsive.isMobile(context)) ? 0 : 57,
+      width: (Responsive.isMobile(context)) ? 0 : 2,
       margin: const EdgeInsets.symmetric(horizontal: 48),
       color: const Color(0xffC0C5D2),
     );

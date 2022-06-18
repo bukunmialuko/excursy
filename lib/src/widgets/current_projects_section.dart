@@ -1,4 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
+import 'package:excursy/src/responsive.dart';
 import 'package:flutter/material.dart';
 
 class CurrentProjectsSection extends StatelessWidget {
@@ -9,16 +10,18 @@ class CurrentProjectsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        const Text(
+        Text(
           "Current Projects",
           style: TextStyle(
-              color: AppColors.darkBlack,
+              color: Responsive.isMobile(context)
+                  ? AppColors.orange
+                  : AppColors.darkBlack,
               fontWeight: FontWeight.w800,
-              fontSize: 52),
+              fontSize: (Responsive.isMobile(context)) ? 24 : 52),
         ),
         const SizedBox(height: 84),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 120),
+          padding: const EdgeInsets.symmetric(horizontal: 120),
           child: Wrap(
             spacing: 30,
             crossAxisAlignment: WrapCrossAlignment.center,

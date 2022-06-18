@@ -132,6 +132,7 @@ class _WebItem extends StatelessWidget {
           Text(
             subTitle,
             style: const TextStyle(
+                height: 1.6,
                 color: AppColors.darkGrey,
                 fontWeight: FontWeight.w400,
                 fontSize: 18),
@@ -223,6 +224,7 @@ class _MobileItem extends StatelessWidget {
                   title,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
+                      height: 1.6,
                       color: AppColors.darkBlack,
                       fontWeight: FontWeight.w700,
                       fontSize: 18),

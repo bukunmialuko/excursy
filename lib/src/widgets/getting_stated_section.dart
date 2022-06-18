@@ -98,39 +98,43 @@ class _LeftSection extends StatelessWidget {
                   ? MainAxisAlignment.center
                   : MainAxisAlignment.start,
               children: [
-                EXCButton(
-                  width: 208,
-                  height: 64,
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      Text(
-                        "Get Started",
-                        style: TextStyle(
-                            color: AppColors.white,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 16),
-                      ),
-                      SizedBox(width: 8),
-                      Icon(Icons.chevron_right_rounded)
-                    ],
+                Center(
+                  child: EXCButton(
+                    width: (Responsive.isMobile(context)) ? 161 : 208,
+                    height: (Responsive.isMobile(context)) ? 48 : 64,
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: const [
+                        Text(
+                          "Get Started",
+                          style: TextStyle(
+                              color: AppColors.white,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16),
+                        ),
+                        SizedBox(width: 8),
+                        Icon(Icons.chevron_right_rounded)
+                      ],
+                    ),
+                    onPressed: () => {},
                   ),
-                  onPressed: () => {},
                 ),
                 const Flexible(child: SizedBox(width: 32)),
-                EXCButton(
-                  width: 208,
-                  height: 64,
-                  color: AppColors.white,
-                  borderColor: AppColors.orange,
-                  child: const Text(
-                    "Learn more",
-                    style: TextStyle(
-                        color: AppColors.darkBlack,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 16),
+                Center(
+                  child: EXCButton(
+                    width: (Responsive.isMobile(context)) ? 161 : 208,
+                    height: (Responsive.isMobile(context)) ? 48 : 64,
+                    color: AppColors.white,
+                    borderColor: AppColors.orange,
+                    child: Text(
+                      "Learn more",
+                      style: TextStyle(
+                          color: AppColors.darkBlack,
+                          fontWeight: FontWeight.w700,
+                          fontSize: (Responsive.isMobile(context)) ? 14 : 16),
+                    ),
+                    onPressed: () => {},
                   ),
-                  onPressed: () => {},
                 )
               ],
             ),
