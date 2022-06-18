@@ -45,7 +45,7 @@ class HeaderWidget extends StatelessWidget {
             width: 239.w,
             height: 76.h,
           ),
-          SizedBox(width: 115.w),
+          SizedBox(width: 110.w),
           Text(
             "Home",
             style: TextStyle(

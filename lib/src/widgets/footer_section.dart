@@ -14,7 +14,10 @@ class FooterSection extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset('assets/svg/footer_bg.svg'),
+          Container(
+            height: 302.h,
+            color: const Color(0xff2B2B2B),
+          ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

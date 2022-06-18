@@ -1,5 +1,6 @@
 import 'package:excursy/src/widgets/about_us_section.dart';
 import 'package:excursy/src/widgets/current_projects_section.dart';
+import 'package:excursy/src/widgets/footer_section.dart';
 import 'package:excursy/src/widgets/getting_stated_section.dart';
 import 'package:excursy/src/widgets/our_interests_section.dart';
 import 'package:excursy/src/widgets/our_values_section.dart';
@@ -38,7 +39,7 @@ class _HomePageState extends State<HomePage> {
             SizedBox(height: 179.h),
             const CurrentProjectsSection(),
             SizedBox(height: 132.h),
-            // const FooterSection(),
+            const FooterSection(),
           ],
         ),
       ),
