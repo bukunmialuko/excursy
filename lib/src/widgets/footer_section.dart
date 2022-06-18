@@ -1,4 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
+import 'package:excursy/src/responsive.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -9,7 +10,7 @@ class FooterSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.darkBlack,
-      height: 302,
+      height: (Responsive.isMobile(context)) ? 376 : 302,
       child: Stack(
         fit: StackFit.expand,
         children: [
@@ -68,7 +69,7 @@ class FooterSection extends StatelessWidget {
                     height: 36,
                     width: 36,
                     child: SvgPicture.asset(
-                      'assets/svg/social/facebook.svg',
+                      'assets/svg/social/github.svg',
                       height: 36,
                       width: 36,
                     ),
@@ -78,7 +79,8 @@ class FooterSection extends StatelessWidget {
               const SizedBox(height: 40),
               Wrap(
                 crossAxisAlignment: WrapCrossAlignment.center,
-                spacing: 40,
+                spacing: (Responsive.isMobile(context)) ? 50 : 40,
+                runSpacing: (Responsive.isMobile(context)) ? 35 : 40,
                 children: const [
                   Text(
                     "Home",

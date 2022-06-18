@@ -19,9 +19,18 @@ class HeaderSection extends StatelessWidget {
                 // height: 1,
               ),
               SvgPicture.asset(
-                "assets/svg/logo_large.svg",
-                width: 145,
+                "assets/svg/logo.svg",
+                width: 44,
                 height: 44,
+              ),
+              const SizedBox(width: 10),
+              const Text(
+                "Excursy",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: AppColors.darkGrey,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 24),
               ),
               const Spacer(),
               SvgPicture.asset(

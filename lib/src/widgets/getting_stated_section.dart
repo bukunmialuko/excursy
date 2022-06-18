@@ -1,4 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
+import 'package:excursy/src/responsive.dart';
 import 'package:excursy/src/shared/exc_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -34,19 +35,23 @@ class _LeftSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FittedBox(
+    return SizedBox(
+      width: 502,
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           SizedBox(
             width: 502,
             child: RichText(
-              text: const TextSpan(
+              textAlign: (Responsive.isMobile(context))
+                  ? TextAlign.center
+                  : TextAlign.start,
+              text: TextSpan(
                 text: 'Let’s take a \ntour to ',
                 style: TextStyle(
                   color: AppColors.darkBlack,
-                  fontSize: 56,
+                  fontSize: (Responsive.isMobile(context)) ? 36 : 56,
                   fontWeight: FontWeight.w800,
                 ),
                 children: <TextSpan>[
@@ -54,15 +59,15 @@ class _LeftSection extends StatelessWidget {
                     text: 'Blockchain',
                     style: TextStyle(
                       color: AppColors.orange,
-                      fontSize: 56,
+                      fontSize: (Responsive.isMobile(context)) ? 36 : 56,
                       fontWeight: FontWeight.w800,
                     ),
                   ),
                   TextSpan(
-                    text: ' Technology',
+                    text: '\nTechnology',
                     style: TextStyle(
                       color: AppColors.darkBlack,
-                      fontSize: 56,
+                      fontSize: (Responsive.isMobile(context)) ? 36 : 56,
                       fontWeight: FontWeight.w800,
                     ),
                   ),
@@ -71,20 +76,27 @@ class _LeftSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 36),
-          const SizedBox(
-            width: 448,
+          SizedBox(
+            width: 502,
             child: Text(
               "We are highly focused by blockchain technology that will lead positively to the future web.",
-              style: TextStyle(
-                  color: AppColors.orange,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 18),
+              textAlign: (Responsive.isMobile(context))
+                  ? TextAlign.center
+                  : TextAlign.start,
+              style: const TextStyle(
+                color: AppColors.orange,
+                fontWeight: FontWeight.w400,
+                fontSize: 18,
+              ),
             ),
           ),
           const SizedBox(height: 74),
           SizedBox(
             width: 502,
-            child: Wrap(
+            child: Row(
+              mainAxisAlignment: (Responsive.isMobile(context))
+                  ? MainAxisAlignment.center
+                  : MainAxisAlignment.start,
               children: [
                 EXCButton(
                   width: 208,
@@ -105,7 +117,7 @@ class _LeftSection extends StatelessWidget {
                   ),
                   onPressed: () => {},
                 ),
-                const SizedBox(width: 32),
+                const Flexible(child: SizedBox(width: 32)),
                 EXCButton(
                   width: 208,
                   height: 64,
@@ -134,12 +146,17 @@ class _RightSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 719,
-      child: SvgPicture.asset(
-        "assets/svg/people1.svg",
+    return Padding(
+      padding: (Responsive.isMobile(context))
+          ? const EdgeInsets.symmetric(horizontal: 33)
+          : EdgeInsets.zero,
+      child: SizedBox(
         width: 719,
-        height: 390,
+        child: SvgPicture.asset(
+          "assets/svg/people1.svg",
+          // width: 719,
+          height: 390,
+        ),
       ),
     );
   }

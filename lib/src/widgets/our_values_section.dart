@@ -1,4 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
+import 'package:excursy/src/responsive.dart';
 import 'package:excursy/src/shared/exc_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -59,35 +60,48 @@ class _RightSection extends StatelessWidget {
     return SizedBox(
       width: 614,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Text(
+          Text(
             "Our Values",
+            textAlign: (Responsive.isMobile(context))
+                ? TextAlign.center
+                : TextAlign.start,
             style: TextStyle(
                 color: AppColors.darkBlack,
                 fontWeight: FontWeight.w800,
-                fontSize: 52),
+                fontSize: (Responsive.isMobile(context)) ? 24 : 52),
           ),
           const SizedBox(height: 35),
-          const Text(
-            'anftw is a hallmark. The team members may change, but the quality of our project execution will not.An outstanding team can build a product in any industry. Don’t be intimidated by incumbents.',
-            style: TextStyle(
-                color: AppColors.darkGrey,
-                fontWeight: FontWeight.w400,
-                fontSize: 20),
-          ),
-          const SizedBox(height: 35),
-          EXCButton(
-            width: 161,
-            height: 54,
-            child: const Text(
-              "Read More",
+          Padding(
+            padding: (Responsive.isMobile(context))
+                ? const EdgeInsets.symmetric(horizontal: 16)
+                : EdgeInsets.zero,
+            child: Text(
+              'anftw is a hallmark. The team members may change, but the quality of our project execution will not.An outstanding team can build a product in any industry. Don’t be intimidated by incumbents.',
+              textAlign: (Responsive.isMobile(context))
+                  ? TextAlign.center
+                  : TextAlign.start,
               style: TextStyle(
-                  color: AppColors.white,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 16),
+                  color: AppColors.darkGrey,
+                  fontWeight: FontWeight.w400,
+                  fontSize: (Responsive.isMobile(context)) ? 12 : 20),
             ),
-            onPressed: () => {},
+          ),
+          const SizedBox(height: 35),
+          Center(
+            child: EXCButton(
+              width: 161,
+              height: 54,
+              child: const Text(
+                "Read More",
+                style: TextStyle(
+                    color: AppColors.white,
+                    fontWeight: FontWeight.w700,
+                    fontSize: 16),
+              ),
+              onPressed: () => {},
+            ),
           )
         ],
       ),

@@ -1,3 +1,4 @@
+import 'package:excursy/src/responsive.dart';
 import 'package:excursy/src/widgets/about_us_section.dart';
 import 'package:excursy/src/widgets/current_projects_section.dart';
 import 'package:excursy/src/widgets/footer_section.dart';
@@ -23,22 +24,35 @@ class _HomePageState extends State<HomePage> {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: const <Widget>[
-            SizedBox(height: 56),
-            HeaderSection(),
-            SizedBox(height: 127),
-            GetStartedSection(),
-            SizedBox(height: 159),
-            PartnersSection(),
-            SizedBox(height: 139),
-            AboutUsSection(),
-            SizedBox(height: 158),
-            OurInterestsSection(),
-            OurValuesSection(),
-            SizedBox(height: 179),
-            CurrentProjectsSection(),
-            SizedBox(height: 132),
-            FooterSection(),
+          children: <Widget>[
+            const SizedBox(height: 56),
+            const HeaderSection(),
+            const SizedBox(height: 55),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 127),
+            ],
+            const GetStartedSection(),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 159),
+            ],
+            const PartnersSection(),
+            const SizedBox(height: 139),
+            const AboutUsSection(),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 158),
+            ],
+            const OurInterestsSection(),
+            const OurValuesSection(),
+            const SizedBox(height: 179),
+            const CurrentProjectsSection(),
+            const SizedBox(height: 132),
+            const FooterSection(),
           ],
         ),
       ),
