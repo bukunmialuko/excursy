@@ -63,6 +63,7 @@ flutter:
   assets:
     - assets/png/
     - assets/svg/
+    - assets/svg/partners/
     - assets/svg/social/
     - assets/fonts/
     - assets/fonts/Manrope/

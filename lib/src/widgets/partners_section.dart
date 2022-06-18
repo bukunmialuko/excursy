@@ -18,47 +18,51 @@ class _PartnersSectionState extends State<PartnersSection> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
-            width: 1035,
-            height: 57,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  width: (Responsive.isMobile(context)) ? 70 : 169,
-                  child: SvgPicture.asset(
-                    "assets/svg/microsoft.svg",
-                    width: (Responsive.isMobile(context)) ? 70 : 169,
-                    height: (Responsive.isMobile(context)) ? 14 : 43,
-                  ),
-                ),
-                const _PartnerSpacer(),
-                SizedBox(
-                  width: (Responsive.isMobile(context)) ? 70 : 169,
-                  child: SvgPicture.asset(
-                    "assets/svg/microsoft.svg",
-                    width: (Responsive.isMobile(context)) ? 70 : 169,
-                    height: (Responsive.isMobile(context)) ? 14 : 43,
-                  ),
-                ),
-                const _PartnerSpacer(),
-                SizedBox(
-                  width: (Responsive.isMobile(context)) ? 70 : 169,
-                  child: SvgPicture.asset(
-                    "assets/svg/microsoft.svg",
-                    width: (Responsive.isMobile(context)) ? 70 : 169,
-                    height: (Responsive.isMobile(context)) ? 14 : 43,
-                  ),
-                ),
-                const _PartnerSpacer(),
-                SizedBox(
-                  width: 175,
-                  child: SvgPicture.asset(
-                    "assets/svg/microsoft.svg",
-                    width: (Responsive.isMobile(context)) ? 70 : 169,
-                    height: (Responsive.isMobile(context)) ? 14 : 43,
-                  ),
-                ),
-              ],
+            width: (Responsive.isMobile(context)) ? 35 : 203,
+          ),
+          SizedBox(
+            width: (Responsive.isMobile(context)) ? 50 : 169,
+            child: SvgPicture.asset(
+              "assets/svg/partners/slack.svg",
+              width: (Responsive.isMobile(context)) ? 50 : 169,
+              height: 13,
+              fit: BoxFit.fitWidth,
+            ),
+          ),
+          const _PartnerSpacer(),
+          SizedBox(
+            width: (Responsive.isMobile(context)) ? 50 : 169,
+            child: SvgPicture.asset(
+              "assets/svg/microsoft.svg",
+              width: (Responsive.isMobile(context)) ? 50 : 169,
+              height: 13,
+            ),
+          ),
+          const _PartnerSpacer(),
+          SizedBox(
+            width: (Responsive.isMobile(context)) ? 50 : 169,
+            child: SvgPicture.asset(
+              "assets/svg/microsoft.svg",
+              width: (Responsive.isMobile(context)) ? 50 : 169,
+              height: 13,
+            ),
+          ),
+          const _PartnerSpacer(),
+          SizedBox(
+            width: (Responsive.isMobile(context)) ? 50 : 169,
+            child: SvgPicture.asset(
+              "assets/svg/microsoft.svg",
+              width: (Responsive.isMobile(context)) ? 50 : 169,
+              height: 13,
+            ),
+          ),
+          const _PartnerSpacer(),
+          SizedBox(
+            width: (Responsive.isMobile(context)) ? 50 : 169,
+            child: SvgPicture.asset(
+              "assets/svg/microsoft.svg",
+              width: (Responsive.isMobile(context)) ? 50 : 169,
+              height: 43,
             ),
           ),
         ],
@@ -75,9 +79,10 @@ class _PartnerSpacer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: (Responsive.isMobile(context)) ? 0 : 57,
+      height: 57,
       width: (Responsive.isMobile(context)) ? 0 : 2,
-      margin: const EdgeInsets.symmetric(horizontal: 48),
+      margin: EdgeInsets.symmetric(
+          horizontal: (Responsive.isMobile(context)) ? 28 : 48),
       color: const Color(0xffC0C5D2),
     );
   }

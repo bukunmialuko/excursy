@@ -105,7 +105,7 @@ class _AboutUsText extends StatelessWidget {
           SizedBox(height: (Responsive.isMobile(context)) ? 16 : 35),
           Padding(
             padding: (Responsive.isMobile(context))
-                ? const EdgeInsets.symmetric(horizontal: 18)
+                ? const EdgeInsets.symmetric(horizontal: 26)
                 : EdgeInsets.zero,
             child: Text(
               "We generated names based on a multitude of factors and picked the one that resonated with us the most. Our founder first engaged with the blockchain in 2013",

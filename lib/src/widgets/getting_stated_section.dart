@@ -14,19 +14,29 @@ class GetStartedSection extends StatefulWidget {
 class _GetStartedSectionState extends State<GetStartedSection> {
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      crossAxisAlignment: WrapCrossAlignment.center,
-      children: [
-        Container(
-          color: Colors.orange,
-          width: 120,
-          // height: 1,
-        ),
-        const _LeftSection(),
-        const SizedBox(width: 91),
-        const _RightSection(),
-      ],
-    );
+    return (Responsive.isMobile(context))
+        ? Column(
+            children: const [
+              _Text(),
+              SizedBox(height: 30),
+              _Image(),
+              SizedBox(height: 39),
+              _Buttons()
+            ],
+          )
+        : Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: [
+              Container(
+                color: Colors.orange,
+                width: 120,
+                // height: 1,
+              ),
+              const _LeftSection(),
+              const SizedBox(width: 91),
+              const _Image(),
+            ],
+          );
   }
 }
 
@@ -40,113 +50,84 @@ class _LeftSection extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(
-            width: 502,
-            child: RichText(
-              textAlign: (Responsive.isMobile(context))
-                  ? TextAlign.center
-                  : TextAlign.start,
-              text: TextSpan(
-                text: 'Let’s take a \ntour to ',
-                style: TextStyle(
-                  color: AppColors.darkBlack,
-                  fontSize: (Responsive.isMobile(context)) ? 36 : 56,
-                  fontWeight: FontWeight.w800,
-                ),
-                children: <TextSpan>[
-                  TextSpan(
-                    text: 'Blockchain',
-                    style: TextStyle(
-                      color: AppColors.orange,
-                      fontSize: (Responsive.isMobile(context)) ? 36 : 56,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                  TextSpan(
-                    text: '\nTechnology',
-                    style: TextStyle(
-                      color: AppColors.darkBlack,
-                      fontSize: (Responsive.isMobile(context)) ? 36 : 56,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ],
+        children: const [_Text(), SizedBox(height: 74), _Buttons()],
+      ),
+    );
+  }
+}
+
+class _Text extends StatelessWidget {
+  const _Text({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        SizedBox(
+          width: 502,
+          child: RichText(
+            textAlign: (Responsive.isMobile(context))
+                ? TextAlign.center
+                : TextAlign.start,
+            text: TextSpan(
+              text: 'Let’s take a \ntour to ',
+              style: TextStyle(
+                color: AppColors.darkBlack,
+                fontSize: (Responsive.isMobile(context)) ? 36 : 56,
+                fontWeight: FontWeight.w800,
               ),
+              children: <TextSpan>[
+                TextSpan(
+                  text: 'Blockchain',
+                  style: TextStyle(
+                    color: AppColors.orange,
+                    fontSize: (Responsive.isMobile(context)) ? 36 : 56,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                TextSpan(
+                  text: '\nTechnology',
+                  style: TextStyle(
+                    color: AppColors.darkBlack,
+                    fontSize: (Responsive.isMobile(context)) ? 36 : 56,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ],
             ),
           ),
-          const SizedBox(height: 36),
-          SizedBox(
+        ),
+        SizedBox(height: (Responsive.isMobile(context)) ? 20 : 36),
+        Padding(
+          padding: (Responsive.isMobile(context))
+              ? const EdgeInsets.all(8.0)
+              : EdgeInsets.zero,
+          child: SizedBox(
             width: 502,
             child: Text(
               "We are highly focused by blockchain technology that will lead positively to the future web.",
               textAlign: (Responsive.isMobile(context))
                   ? TextAlign.center
                   : TextAlign.start,
-              style: const TextStyle(
-                color: AppColors.orange,
+              style: TextStyle(
+                color: (Responsive.isMobile(context))
+                    ? AppColors.darkGrey
+                    : AppColors.orange,
                 fontWeight: FontWeight.w400,
-                fontSize: 18,
+                fontSize: (Responsive.isMobile(context)) ? 14 : 18,
               ),
             ),
           ),
-          const SizedBox(height: 74),
-          SizedBox(
-            width: 502,
-            child: Row(
-              mainAxisAlignment: (Responsive.isMobile(context))
-                  ? MainAxisAlignment.center
-                  : MainAxisAlignment.start,
-              children: [
-                Center(
-                  child: EXCButton(
-                    width: (Responsive.isMobile(context)) ? 161 : 208,
-                    height: (Responsive.isMobile(context)) ? 48 : 64,
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        Text(
-                          "Get Started",
-                          style: TextStyle(
-                              color: AppColors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16),
-                        ),
-                        SizedBox(width: 8),
-                        Icon(Icons.chevron_right_rounded)
-                      ],
-                    ),
-                    onPressed: () => {},
-                  ),
-                ),
-                const Flexible(child: SizedBox(width: 32)),
-                Center(
-                  child: EXCButton(
-                    width: (Responsive.isMobile(context)) ? 161 : 208,
-                    height: (Responsive.isMobile(context)) ? 48 : 64,
-                    color: AppColors.white,
-                    borderColor: AppColors.orange,
-                    child: Text(
-                      "Learn more",
-                      style: TextStyle(
-                          color: AppColors.darkBlack,
-                          fontWeight: FontWeight.w700,
-                          fontSize: (Responsive.isMobile(context)) ? 14 : 16),
-                    ),
-                    onPressed: () => {},
-                  ),
-                )
-              ],
-            ),
-          )
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
 
-class _RightSection extends StatelessWidget {
-  const _RightSection({Key? key}) : super(key: key);
+class _Image extends StatelessWidget {
+  const _Image({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -158,9 +139,64 @@ class _RightSection extends StatelessWidget {
         width: 719,
         child: SvgPicture.asset(
           "assets/svg/people1.svg",
-          // width: 719,
-          height: 390,
+          height: (Responsive.isMobile(context)) ? 164 : 390,
         ),
+      ),
+    );
+  }
+}
+
+class _Buttons extends StatelessWidget {
+  const _Buttons({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 502,
+      child: Row(
+        mainAxisAlignment: (Responsive.isMobile(context))
+            ? MainAxisAlignment.center
+            : MainAxisAlignment.start,
+        children: [
+          Center(
+            child: EXCButton(
+              width: (Responsive.isMobile(context)) ? 161 : 208,
+              height: (Responsive.isMobile(context)) ? 48 : 64,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Text(
+                    "Get Started",
+                    style: TextStyle(
+                        color: AppColors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16),
+                  ),
+                  SizedBox(width: 8),
+                  Icon(Icons.chevron_right_rounded)
+                ],
+              ),
+              onPressed: () => {},
+            ),
+          ),
+          const Flexible(child: SizedBox(width: 32)),
+          Center(
+            child: EXCButton(
+              width: (Responsive.isMobile(context)) ? 161 : 208,
+              height: (Responsive.isMobile(context)) ? 48 : 64,
+              color: AppColors.white,
+              borderColor: AppColors.orange,
+              child: Text(
+                "Learn more",
+                style: TextStyle(
+                    color: AppColors.darkBlack,
+                    fontWeight: FontWeight.w700,
+                    fontSize: (Responsive.isMobile(context)) ? 14 : 16),
+              ),
+              onPressed: () => {},
+            ),
+          )
+        ],
       ),
     );
   }
