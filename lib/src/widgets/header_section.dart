@@ -1,4 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
+import 'package:excursy/src/responsive.dart';
 import 'package:excursy/src/shared/exc_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,24 +10,51 @@ class HeaderSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          color: Colors.orange,
-          width: 120.w,
-          // height: 1,
-        ),
-        const Flexible(
-          child: HeaderWidget(),
-        ),
-        Container(
-          color: Colors.orange,
-          width: 120.w,
-          // height: 1,
-        ),
-      ],
-    );
+    return (Responsive.isMobile(context)
+        ? Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.orange,
+                width: 16,
+                // height: 1,
+              ),
+              SvgPicture.asset(
+                "assets/svg/logo_large.svg",
+                width: 145,
+                height: 44,
+              ),
+              const Spacer(),
+              SvgPicture.asset(
+                "assets/svg/drawer.svg",
+                width: 29,
+                height: 24,
+              ),
+              Container(
+                color: Colors.orange,
+                width: 16,
+                // height: 1,
+              ),
+            ],
+          )
+        : Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                color: Colors.orange,
+                width: 120.w,
+                // height: 1,
+              ),
+              const Flexible(
+                child: HeaderWidget(),
+              ),
+              Container(
+                color: Colors.orange,
+                width: 120.w,
+                // height: 1,
+              ),
+            ],
+          ));
   }
 }
 
