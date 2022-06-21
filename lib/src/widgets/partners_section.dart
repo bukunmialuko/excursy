@@ -42,7 +42,7 @@ class _PartnersSectionState extends State<PartnersSection> {
           SizedBox(
             width: (Responsive.isMobile(context)) ? 50 : 169,
             child: SvgPicture.asset(
-              "assets/svg/microsoft.svg",
+              "assets/svg/partners/slack.svg",
               width: (Responsive.isMobile(context)) ? 50 : 169,
               height: (Responsive.isMobile(context)) ? 13 : 157,
             ),
