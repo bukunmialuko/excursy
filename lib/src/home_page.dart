@@ -25,7 +25,11 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            const SizedBox(height: 56),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 44)
+            ] else ...[
+              const SizedBox(height: 56),
+            ],
             const HeaderSection(),
             if (Responsive.isMobile(context)) ...[
               const SizedBox(height: 48)
