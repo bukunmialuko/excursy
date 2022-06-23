@@ -20,9 +20,7 @@ or
 
 ## 🎥 Gif
 <p align="center">
-
-![](https://github.com/bukunmialuko/excursy/blob/main/art/excursy.gif)
-
+ <img src="https://github.com/bukunmialuko/excursy/blob/main/art/excursy.gif" alt="gif demo" />
 </p>
 
 ## 🤓 Design Credit
