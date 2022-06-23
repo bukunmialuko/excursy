@@ -1,4 +1,4 @@
-# Excurssy
+# Excursy
 
 A mobile-responsive blockchain website built with flutter.
 
