@@ -4,7 +4,9 @@ A mobile-responsive blockchain website built with flutter.
 
 ## Build
 ```flutter build web --web-renderer html --release```
+
 or
+
 ```flutter build web --web-renderer canvaskit --release```
 
 
