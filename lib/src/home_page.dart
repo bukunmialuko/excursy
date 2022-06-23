@@ -1,3 +1,4 @@
+import 'package:excursy/src/responsive.dart';
 import 'package:excursy/src/widgets/about_us_section.dart';
 import 'package:excursy/src/widgets/current_projects_section.dart';
 import 'package:excursy/src/widgets/footer_section.dart';
@@ -6,7 +7,6 @@ import 'package:excursy/src/widgets/our_interests_section.dart';
 import 'package:excursy/src/widgets/our_values_section.dart';
 import 'package:excursy/src/widgets/partners_section.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'widgets/header_section.dart';
 
@@ -25,20 +25,49 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 56.h),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 44)
+            ] else ...[
+              const SizedBox(height: 56),
+            ],
             const HeaderSection(),
-            SizedBox(height: 127.h),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 127),
+            ],
             const GetStartedSection(),
-            SizedBox(height: 159.h),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 159),
+            ],
             const PartnersSection(),
-            SizedBox(height: 139.h),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 24)
+            ] else ...[
+              const SizedBox(height: 139),
+            ],
             const AboutUsSection(),
-            SizedBox(height: 158.h),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 158),
+            ],
             const OurInterestsSection(),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 179),
+            ],
             const OurValuesSection(),
-            SizedBox(height: 179.h),
+            if (Responsive.isMobile(context)) ...[
+              const SizedBox(height: 48)
+            ] else ...[
+              const SizedBox(height: 179),
+            ],
             const CurrentProjectsSection(),
-            SizedBox(height: 132.h),
+            const SizedBox(height: 132),
             const FooterSection(),
           ],
         ),

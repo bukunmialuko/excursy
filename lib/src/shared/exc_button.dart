@@ -1,6 +1,5 @@
 import 'package:excursy/src/res/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class EXCButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -40,10 +39,10 @@ class EXCButton extends StatelessWidget {
             elevation: 0.0,
             shadowColor: Colors.transparent,
             padding: EdgeInsets.symmetric(
-                vertical: verticalPadding ?? 15.h,
+                vertical: verticalPadding ?? 15,
                 horizontal: horizontalPadding ?? 0),
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? 10.r),
+              borderRadius: BorderRadius.circular(borderRadius ?? 10),
               side: BorderSide(
                   color: onPressed == null
                       ? Colors.transparent
