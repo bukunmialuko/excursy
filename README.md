@@ -1,4 +1,4 @@
-# excursy
+# Excurssy
 
 A mobile-responsive blockchain website built with flutter.
 
@@ -28,7 +28,7 @@ or
 
 <br />
 
-## Contributing
+## 🤝 Contributing
 Contributions are welcomed via PRs
 
 
