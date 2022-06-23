@@ -19,7 +19,7 @@ flutter build web --web-renderer canvaskit --release
 <br />
 
 ## 📸 Gif
-![Demo Gif](art/excursy.png" alt="excursy.gif)
+![](https://github.com/bukunmialuko/excursy/blob/main/art/excursy.gif)
 
 ## 🤓 Design Credit
 
@@ -29,8 +29,8 @@ flutter build web --web-renderer canvaskit --release
 <br />
 
 ## Contributing
-- Contributions are welcomed.
-- Crate a descriptive PR to contribute.
+Contributions are welcomed via PRs
+
 
 ## 😃 Show some love ❤️😍😍
 
