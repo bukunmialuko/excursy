@@ -19,7 +19,11 @@ or
 <br />
 
 ## 📸 Gif
+<p align="center">
+
 ![](https://github.com/bukunmialuko/excursy/blob/main/art/excursy.gif)
+
+</p>
 
 ## 🤓 Design Credit
 
