@@ -18,7 +18,7 @@ or
 
 <br />
 
-## 📸 Gif
+## 🎥 Gif
 <p align="center">
 
 ![](https://github.com/bukunmialuko/excursy/blob/main/art/excursy.gif)
