@@ -75,3 +75,18 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+///
+/// https://stackoverflow.com/a/67452289/8095270
+class FlutterWebImageWithUrl extends StatelessWidget {
+  const FlutterWebImageWithUrl({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 200,
+      width: 200,
+      child: Image.network('https://picsum.photos/250?image=9'),
+    );
+  }
+}
