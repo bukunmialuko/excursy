@@ -13,7 +13,7 @@ class EXCButton extends StatelessWidget {
   final double width;
   final double? borderRadius;
   const EXCButton(
-      {Key? key,
+      {super.key,
       this.onPressed,
       this.child,
       this.text,
@@ -26,16 +26,14 @@ class EXCButton extends StatelessWidget {
       this.borderRadius,
       required this.height,
       required this.width})
-      : assert(text != null || child != null),
-        super(key: key);
+      : assert(text != null || child != null);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            primary: color ?? AppColors.orange,
-            onSurface: color ?? AppColors.orange,
+            backgroundColor: color ?? AppColors.orange,
             elevation: 0.0,
             shadowColor: Colors.transparent,
             padding: EdgeInsets.symmetric(
@@ -52,7 +50,7 @@ class EXCButton extends StatelessWidget {
         child: text != null ? Text(text!, style: buttonTextStyle()) : child);
   }
 
-  buttonTextStyle() {
+  TextStyle buttonTextStyle() {
     return TextStyle(
       fontFamily: 'Gilroy',
       fontSize: fontSize ?? 16,
@@ -63,8 +61,8 @@ class EXCButton extends StatelessWidget {
   }
 }
 
-Widget visibilityToggle(Function? onToggle, bool _isHidden) => InkWell(
+Widget visibilityToggle(Function? onToggle, bool isHidden) => InkWell(
       onTap: onToggle != null ? () => onToggle() : null,
-      child: Icon(_isHidden ? Icons.visibility : Icons.visibility_off,
+      child: Icon(isHidden ? Icons.visibility : Icons.visibility_off,
           color: AppColors.orange),
     );

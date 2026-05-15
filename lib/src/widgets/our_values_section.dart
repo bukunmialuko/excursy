@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OurValuesSection extends StatefulWidget {
-  const OurValuesSection({Key? key}) : super(key: key);
+  const OurValuesSection({super.key});
 
   @override
   State<OurValuesSection> createState() => _OurValuesSectionState();
@@ -36,7 +36,7 @@ class _OurValuesSectionState extends State<OurValuesSection> {
 }
 
 class _LeftSection extends StatelessWidget {
-  const _LeftSection({Key? key}) : super(key: key);
+  const _LeftSection();
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +53,7 @@ class _LeftSection extends StatelessWidget {
 }
 
 class _RightSection extends StatelessWidget {
-  const _RightSection({Key? key}) : super(key: key);
+  const _RightSection();
 
   @override
   Widget build(BuildContext context) {

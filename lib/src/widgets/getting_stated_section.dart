@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class GetStartedSection extends StatefulWidget {
-  const GetStartedSection({Key? key}) : super(key: key);
+  const GetStartedSection({super.key});
 
   @override
   State<GetStartedSection> createState() => _GetStartedSectionState();
@@ -41,7 +41,7 @@ class _GetStartedSectionState extends State<GetStartedSection> {
 }
 
 class _LeftSection extends StatelessWidget {
-  const _LeftSection({Key? key}) : super(key: key);
+  const _LeftSection();
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +57,7 @@ class _LeftSection extends StatelessWidget {
 }
 
 class _Text extends StatelessWidget {
-  const _Text({Key? key}) : super(key: key);
+  const _Text();
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +127,7 @@ class _Text extends StatelessWidget {
 }
 
 class _Image extends StatelessWidget {
-  const _Image({Key? key}) : super(key: key);
+  const _Image();
 
   @override
   Widget build(BuildContext context) {
@@ -147,7 +147,7 @@ class _Image extends StatelessWidget {
 }
 
 class _Buttons extends StatelessWidget {
-  const _Buttons({Key? key}) : super(key: key);
+  const _Buttons();
 
   @override
   Widget build(BuildContext context) {

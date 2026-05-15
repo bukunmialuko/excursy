@@ -3,7 +3,7 @@ import 'package:excursy/src/responsive.dart';
 import 'package:flutter/material.dart';
 
 class CurrentProjectsSection extends StatelessWidget {
-  const CurrentProjectsSection({Key? key}) : super(key: key);
+  const CurrentProjectsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ class CurrentProjectsSection extends StatelessWidget {
 }
 
 class _Text extends StatelessWidget {
-  const _Text({Key? key}) : super(key: key);
+  const _Text();
 
   @override
   Widget build(BuildContext context) {
@@ -100,11 +100,9 @@ class _OurInterestWebItem extends StatelessWidget {
   final String subTitle;
 
   const _OurInterestWebItem(
-      {Key? key,
-      required this.assetName,
+      {required this.assetName,
       required this.title,
-      required this.subTitle})
-      : super(key: key);
+      required this.subTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -164,11 +162,10 @@ class _MobileItem extends StatelessWidget {
   final String title;
   final String subTitle;
   const _MobileItem({
-    Key? key,
     required this.assetName,
     required this.title,
     required this.subTitle,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

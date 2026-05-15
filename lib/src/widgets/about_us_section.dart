@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AboutUsSection extends StatefulWidget {
-  const AboutUsSection({Key? key}) : super(key: key);
+  const AboutUsSection({super.key});
 
   @override
   State<AboutUsSection> createState() => _AboutUsSectionState();
@@ -47,7 +47,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
 }
 
 class _Image extends StatelessWidget {
-  const _Image({Key? key}) : super(key: key);
+  const _Image();
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class _Image extends StatelessWidget {
 }
 
 class _RightSection extends StatelessWidget {
-  const _RightSection({Key? key}) : super(key: key);
+  const _RightSection();
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,7 @@ class _RightSection extends StatelessWidget {
 }
 
 class _AboutUsText extends StatelessWidget {
-  const _AboutUsText({Key? key}) : super(key: key);
+  const _AboutUsText();
 
   @override
   Widget build(BuildContext context) {
@@ -126,7 +126,7 @@ class _AboutUsText extends StatelessWidget {
 }
 
 class _Frame100 extends StatelessWidget {
-  const _Frame100({Key? key}) : super(key: key);
+  const _Frame100();
 
   @override
   Widget build(BuildContext context) {
@@ -159,10 +159,9 @@ class _Frame100Item extends StatelessWidget {
   final String title;
   final String count;
   const _Frame100Item({
-    Key? key,
     required this.title,
     required this.count,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -191,9 +190,7 @@ class _Frame100Item extends StatelessWidget {
 }
 
 class _Frame100ItemSpacer extends StatelessWidget {
-  const _Frame100ItemSpacer({
-    Key? key,
-  }) : super(key: key);
+  const _Frame100ItemSpacer();
 
   @override
   Widget build(BuildContext context) {
@@ -207,7 +204,7 @@ class _Frame100ItemSpacer extends StatelessWidget {
 }
 
 class _Frame111 extends StatelessWidget {
-  const _Frame111({Key? key}) : super(key: key);
+  const _Frame111();
 
   @override
   Widget build(BuildContext context) {
@@ -253,10 +250,9 @@ class _Frame111Item extends StatelessWidget {
   final String title;
   final String count;
   const _Frame111Item({
-    Key? key,
     required this.title,
     required this.count,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -308,7 +304,7 @@ class _Frame111Item extends StatelessWidget {
 }
 
 class _Frame111Spacer extends StatelessWidget {
-  const _Frame111Spacer({Key? key}) : super(key: key);
+  const _Frame111Spacer();
 
   @override
   Widget build(BuildContext context) {

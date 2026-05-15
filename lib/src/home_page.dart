@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'widgets/header_section.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
 ///
 /// https://stackoverflow.com/a/67452289/8095270
 class FlutterWebImageWithUrl extends StatelessWidget {
-  const FlutterWebImageWithUrl({Key? key}) : super(key: key);
+  const FlutterWebImageWithUrl({super.key});
 
   @override
   Widget build(BuildContext context) {

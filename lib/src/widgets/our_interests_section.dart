@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OurInterestsSection extends StatelessWidget {
-  const OurInterestsSection({Key? key}) : super(key: key);
+  const OurInterestsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class OurInterestsSection extends StatelessWidget {
 }
 
 class _Text extends StatelessWidget {
-  const _Text({Key? key}) : super(key: key);
+  const _Text();
 
   @override
   Widget build(BuildContext context) {
@@ -56,7 +56,7 @@ class _Text extends StatelessWidget {
 }
 
 class _WebInterests extends StatelessWidget {
-  const _WebInterests({Key? key}) : super(key: key);
+  const _WebInterests();
 
   @override
   Widget build(BuildContext context) {
@@ -97,11 +97,9 @@ class _WebItem extends StatelessWidget {
   final String subTitle;
 
   const _WebItem(
-      {Key? key,
-      required this.assetName,
+      {required this.assetName,
       required this.title,
-      required this.subTitle})
-      : super(key: key);
+      required this.subTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -152,7 +150,7 @@ class _WebItem extends StatelessWidget {
 }
 
 class _MobileInterests extends StatelessWidget {
-  const _MobileInterests({Key? key}) : super(key: key);
+  const _MobileInterests();
 
   @override
   Widget build(BuildContext context) {
@@ -193,11 +191,9 @@ class _MobileItem extends StatelessWidget {
   final String title;
   final String subTitle;
   const _MobileItem(
-      {Key? key,
-      required this.assetName,
+      {required this.assetName,
       required this.title,
-      required this.subTitle})
-      : super(key: key);
+      required this.subTitle});
 
   @override
   Widget build(BuildContext context) {

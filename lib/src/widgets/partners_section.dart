@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PartnersSection extends StatefulWidget {
-  const PartnersSection({Key? key}) : super(key: key);
+  const PartnersSection({super.key});
 
   @override
   State<PartnersSection> createState() => _PartnersSectionState();
@@ -63,9 +63,7 @@ class _PartnersSectionState extends State<PartnersSection> {
 }
 
 class _PartnerSpacer extends StatelessWidget {
-  const _PartnerSpacer({
-    Key? key,
-  }) : super(key: key);
+  const _PartnerSpacer();
 
   @override
   Widget build(BuildContext context) {
